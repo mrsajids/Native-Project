@@ -11,7 +11,7 @@ export default function TabLayout() {
   return (
     // <>
     // <Text>
-    //   jfkjdkf
+    //   jfkjdkf 
     // </Text>
     // </>
     <Tabs
