@@ -4,11 +4,16 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Text } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
   return (
+    // <>
+    // <Text>
+    //   jfkjdkf
+    // </Text>
+    // </>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -27,6 +32,16 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: 'Explore',
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Navbar"
+        options={{
+          title: 'Explor2e',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
